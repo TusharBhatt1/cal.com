@@ -1,5 +1,6 @@
 import React, { useState, Suspense } from "react";
-import type { Dispatch, SetStateAction, useEffect } from "react";
+import { useEffect } from "react";
+import type { Dispatch, SetStateAction } from "react";
 import type { UseFormRegisterReturn } from "react-hook-form";
 import { Controller, useFormContext } from "react-hook-form";
 import type { z } from "zod";
