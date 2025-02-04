@@ -16,5 +16,6 @@ export enum ErrorCode {
   UnableToSubscribeToThePlatform = "unable_to_subscribe_to_the_platform",
   UpdatingOauthClientError = "updating_oauth_client_error",
   CreatingOauthClientError = "creating_oauth_client_error",
+  BookingTimeOutOfBounds = "booking_time_out_of_bounds_error",
   MinimumReschedulingNoticeExceededError = "minimum_rescheduling_notice_exceeded_error",
 }
