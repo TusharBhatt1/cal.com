@@ -247,7 +247,9 @@ const Days = ({
     }
   };
 
-  useEffect(useHandleInitialDateSelection);
+  const handleInitialDateSelection = useHandleInitialDateSelection;
+
+  useEffect(() => handleInitialDateSelection(), []);
 
   return (
     <>
