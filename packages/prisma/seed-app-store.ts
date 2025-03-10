@@ -315,6 +315,15 @@ export default async function main() {
     });
   }
   await createApp("jitsi", "jitsivideo", ["conferencing"], "jitsi_video");
+
+  // Messaging apps
+  if (process.env.SLACK_CLIENT_ID && process.env.SLACK_CLIENT_SECRET) {
+    await createApp("slack", "slack", ["messaging"], "slack_messaging", {
+      client_id: process.env.SLACK_CLIENT_ID,
+      client_secret: process.env.SLACK_CLIENT_SECRET,
+    });
+  }
+
   // Other apps
   if (process.env.HUBSPOT_CLIENT_ID && process.env.HUBSPOT_CLIENT_SECRET) {
     await createApp("hubspot", "hubspot", ["crm"], "hubspot_other_calendar", {

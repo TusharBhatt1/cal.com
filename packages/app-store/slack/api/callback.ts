@@ -48,20 +48,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const slackUserId = authed_user.id;
     const slackAccessToken = access_token;
 
-    const app = await prisma.app.findUnique({
-      where: { slug: "slack-test" },
-    });
-
-    if (!app) {
-      console.log("Adding App as not found in app table");
-      await prisma.app.create({
-        data: {
-          slug: "slack-test",
-          dirName: "slack-test",
-          enabled: true,
-        },
-      });
-    }
     await prisma.credential.create({
       data: {
         type: "slack-test",
