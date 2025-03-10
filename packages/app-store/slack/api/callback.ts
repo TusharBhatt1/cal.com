@@ -22,6 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (existingUser) {
     res.status(200).json({ message: "Slack already installed" });
+    return;
   }
 
   try {
